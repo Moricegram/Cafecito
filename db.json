@@ -1,0 +1,20 @@
+{
+    "productos":[
+        {
+            "nombreProducto":"café",
+            "precio": 300,
+            "categoria": "bebida caliente",
+            "imagen": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg",
+            "descripcion": "café con crema",
+            "id": 1
+        },
+        {
+            "nombreProducto":"té",
+            "precio": 250,
+            "categoria": "bebida caliente",
+            "imagen": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg",
+            "descripcion": "te de manzanilla",
+            "id": 2
+        }
+    ]
+}
