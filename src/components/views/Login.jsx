@@ -1,6 +1,9 @@
 
 import { Form, Button, Container, Card } from "react-bootstrap";
 import {useForm} from "react-hook-form"
+import { login } from "../helpers/queries";
+import Swal from "sweetalert2";
+
 
 const Login = () => {
   const {
@@ -11,7 +14,24 @@ const Login = () => {
 //Esta es la funcion que pide loguear al usuario
   const onSubmit = (usuario) => {
     console.log("Aqui agrego mi logica")
-    console.log(usuario);
+    console.log(usuario)
+    login(usuario).then((respuesta)=>{
+      console.log(respuesta)
+      if(respuesta){
+        Swal.fire(
+          'Bienvenido'+respuesta.nombreUsuario,
+          'Ingresaste a la web cafecito',
+          'success'
+        )
+      }else{
+        Swal.fire(
+          'Ocurrio un error',
+          'Email o password incorrecto',
+          'error'
+        )
+      }
+    })
+
   }
 
   return (
