@@ -23,6 +23,8 @@ const Login = () => {
           'Ingresaste a la web cafecito',
           'success'
         )
+        //guardar el usuario en el localStorage
+        sessionStorage.setItem('usuarioLogueado', JSON.stringify(respuesta));
       }else{
         Swal.fire(
           'Ocurrio un error',
